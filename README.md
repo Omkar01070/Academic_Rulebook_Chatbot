@@ -1,4 +1,4 @@
 # Academic_Rulebook_Chatbot
-
+This project implements a Retrieval-Augmented Generation (RAG) system for answering academic rule-based queries using natural language. The system integrates several components including PDF text extraction, token-based chunking, semantic embedding generation, vector similarity search and a language model interface. Text is first extracted from a rulebook PDF file and chunked into manageable segments using a BERT tokenizer. These chunks are embedded into vectors using the all-MiniLM-L6-v2 model and indexed using FAISS for efficient similarity search. When a user submits a query, the system retrieves the top relevant text segments based on vector similarity and generates a context-aware answer using the Groq API with the LLaMA 3 model. The project also includes a FastAPI backend for real-time interaction, enabling users to send questions via an HTTP POST request and receive intelligent responses. The tool is ideal for automated academic helpdesks or any application requiring smart retrieval and summarization from unstructured documents.
 
 chrome url: http://localhost:8000/docs
